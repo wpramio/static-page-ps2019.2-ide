@@ -3,6 +3,7 @@ html,
 body {
   padding: 0px;
   margin: 0px;
+  scroll-behavior: smooth;
   font: 14px "Inconsolata", monospace, "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
@@ -65,7 +66,7 @@ nav ul li a {
   height: 90%;
   background-image: url("../images/coffeehouse.jpg");
   background-repeat: no-repeat;
-  background-size: 100% 190%;
+  background-size: 190% 190%;
   background-position: center;
   background-color: #CEB99F;
   color: white;
@@ -111,14 +112,18 @@ nav ul li a {
   padding: 3.5rem 0;
 }
 
-.column {
-  width: 60%;
-  height: 100%;
-  margin: 0 20%;
-  left: 20%;
+.main-content p {
+  line-height: 2rem;
+  font-size: 1.5rem;
 }
 
-.image-fullwidth img{
+.column {
+  width: 80%;
+  height: 100%;
+  margin: 0 10%;
+}
+
+.image-fullwidth img {
   width: 100%;
   height: auto;
 }
@@ -136,8 +141,16 @@ footer {
   font-weight: bold;
 }
 
+.italic {
+  font-style: italic;
+}
+
 .uppercase {
   text-transform: uppercase;
+}
+
+.text-centralized {
+  text-align: center;
 }
 
 .whitetext {
@@ -148,28 +161,31 @@ footer {
   background-color: black;
 }
 
-.italic {
-  font-style: italic;
+.fyi {
+  padding: 3px 4px;
 }
 
 .conteudo-subtitle {
   display: table;
   text-align: center;
+  letter-spacing: 0.3rem;
   margin: 4rem auto; /* deixar centralizado */
-  padding: 0.4rem 0.8rem;
+  padding: 0.3rem 0.8rem;
 }
 
 .form-field {
-  width: 100%;
+  width: 99%;
   height: 3rem;
   margin: 0.8rem 0;
-  padding: 0.3rem;
+  padding: 0.3rem 0;
+  padding-left: 0.3rem;
 }
 
 .form-button {
   height: 3rem;
   padding: 1rem;
   border: none;
+  cursor: pointer;
 }
 
 .quote {
@@ -182,22 +198,108 @@ footer {
 }
 
 .menu {
+  width: 100%;
+  margin: 0;
+  margin-bottom: 5vh;
+  /* padding: 2vw 5vh; */
+  box-shadow: 0 0 8px rgb(172, 166, 154);
+  font-size: 1.5rem;
+}
+
+.menu-tab {
+  padding: 0.3vw;
   box-shadow: 0 0 8px rgb(172, 166, 154);
 }
 
-.tab {
-  box-shadow: 0 0 8px rgb(172, 166, 154);
+.menu-tab button {
+  font-size: 1.5rem;
+}
+
+.menu-content {
+  padding: 2vh 1vw;
+}
+
+.menu-content dd {
+  color: rgb(116, 113, 113);
+  margin: 1.2rem 0 4rem 0;
 }
 
 .tablinks {
-  display: inline-table;
+  display: inline-block;
+  overflow: hidden;
   width: 45%;
   border: none;
-  margin: 0.1rem 0.4rem;
+  margin-left: 2.5%;
   cursor: pointer;
   transition: 0.3s;
+  background-color: rgb(247, 245, 242);
+  outline: none;
 }
-.tablinks .active {
+
+.tablinks:hover {
+  background-color: rgb(187, 187, 187);
+  color: white;
+  transition: 0.3s;
+}
+
+.active {
   background-color: rgb(97, 97, 97);
   color: white; 
+}
+
+.disabled {
+  display: none;
+}
+
+.top-anchor {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  height: 2.2rem;
+  width: 2.2rem;
+  border-radius: 1.1rem;
+  opacity: 0.7;
+  z-index: 999;
+  background-color: black;
+}
+.top-anchor a {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  text-decoration: none;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* media queries */
+
+@media (min-width: 1200px)
+{
+  .banner {
+    background-size: 100% 190%;
+  }
+
+  .column {
+    width: 60%;
+    margin: 0 20%;
+  }
+  .menu {
+    width: 60%;
+    margin: 0 20%;
+    margin-bottom: 5vh;
+  }
+  .form-contact {
+    display: block;
+    margin: 0 25%;
+  }
+  .form-field {
+    width: 98%;
+    clear: right;
+    margin-right: 25%;
+  }
+  .top-anchor {
+    opacity: 1;
+  }
 }

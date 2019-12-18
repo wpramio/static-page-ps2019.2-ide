@@ -7,8 +7,26 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
+    <div class="top-anchor">
+      <a href="#top">^</a>
+    </div>
     <%- include('./includes/navbar.ejs') -%>
     <%- include('./includes/conteudo.ejs') -%>
     <%- include('./includes/footer.ejs') -%>
   </body>
+  <script>
+      function openMenu(evt, menutype) {
+          var tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (var i=0; i < tabcontent.length; i++){
+              tabcontent[i].className = "tabcontent disabled";
+          }
+          tablinks = document.getElementsByClassName("tablinks");
+          for (var i=0; i < tablinks.length; i++){
+              tablinks[i].className = tablinks[i].className.replace(" active", "");
+          }
+          document.getElementById(menutype).className = document.getElementById(menutype).className.replace(" disabled", "");
+          evt.currentTarget.className += " active";
+      }
+  </script>
 </html>
