@@ -7,7 +7,7 @@
 * Instale o [Node.js](https://nodejs.org/en/download/) na versão **LTS**, do seu sistema atual.
 * Instale um editor de texto moderno: [VScode](https://code.visualstudio.com/), [Atom](https://atom.io/) 
 
-> obs.: [Chocolatey](https://chocolatey.org/install) + [Chocolatey GUI](https://chocolatey.org/packages/ChocolateyGUI) é uma ótima opção para gerenciamento (instação e update) de programas no windows. 
+> obs.: [Chocolatey](https://chocolatey.org/install) + [Chocolatey GUI](https://chocolatey.org/packages/ChocolateyGUI) é uma ótima opção para gerenciamento (instalação e update) de programas no windows. 
 
 ### Instruções de uso
 * Clone o repositório para uma pasta local.
