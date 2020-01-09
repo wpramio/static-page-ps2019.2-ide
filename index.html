@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>The Cafe - PS2019/2</title>
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap"
+     rel="stylesheet">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="top-anchor">
+      <a href="#top">^</a>
+    </div>
+    <header>
+        <nav id="top">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="#content-about">About</a></li>
+                <li><a href="#content-menu">Menu</a></li>
+                <li><a href="#content-where">Where</a></li>
+            </ul>
+        </nav>
+            <div class="banner">
+                <div class="banner-opentime">
+                    Open from 6am to 5pm
+                </div>
+                <div class="banner-title">
+                    <h1>the<br>Cafe</h1>
+                </div>
+                <div class="banner-adress">
+                    15 Adr street, 5015
+                </div>
+            </div>
+    </header>
+    <section class="main-content">
+        <div class="column">
+            <section class="content-about" id="content-about">
+                <h1 class="conteudo-subtitle uppercase whitetext blackbg">About the Cafe</h1>
+                <p>The Cafe was founded in blabla by Mr. Smith in lorem ipsum dolor sit amet,
+                consectetur adipiscing elit, sed do euismod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat.</p>
+                <p>In addition to our full espresso and brew bar menu, we serve fresh made-to-order breakfast and lunch
+                sandwiches, as well as a selection of sides ands salads and other good stuff.</p>
+                <p class="quote"><span class="italic">"Use products from nature for what it's worth - but never too early, nor too late." 
+                Fresh is the new sweet.</span><br>
+                Chef, Coffeeist and Owner: Liam Brown</p>
+                <figure class="image-fullwidth">
+                    <img src="/images/coffeeshop.jpg" alt="Coffeeshop scene">
+                </figure>
+                <p><span class="bold">Opening hours:</span> everyday from 6am to 5pm.</p>
+                <p><span class="bold">Address:</span> 15 Adr street, 5015, NY</p>
+            </section>
+            <section class="content-menu" id="content-menu">
+                <h1 class="conteudo-subtitle uppercase whitetext blackbg">The menu</h1>
+                <div class= "menu">
+                    <div class="menu-tab">
+                        <button class="tablinks active" onclick="openMenu(event, 'Eat')">Eat</button>
+                        <button class="tablinks" onclick="openMenu(event, 'Drink')">Drink</button>
+                    </div>
+                    <div class="menu-content">
+                        <div id="Eat" class="tabcontent">
+                            <dl>
+                                <dt>Bread Basket</dt>
+                                <dd>Assortment of fresh baked fruit breads and muffins 5.50</dd>
+                                <dt>Honey Almond Granola with Fruits</dt>
+                                <dd>Natural cereal of honey toasted oats, raisings, almonds and dates 7.00</dd>
+                                <dt>Belgian Waffle</dt>
+                                <dd>Vanilla flavored batter with malted flour 7.50</dd>
+                                <dt>Scrambled eggs</dt>
+                                <dd>Scrambled eggs, roasted red pepper and garlic, with green onions 7.50</dd>
+                                <dt>Blueberry Pancakes</dt>
+                                <dd>With syrup, butter and lots of berries 8.50</dd>
+                            </dl>
+                        </div>
+                        <div id="Drink" class="tabcontent disabled">
+                            <dl>
+                                <dt>Coffee</dt>
+                                <dd>Regular coffee 2.50</dd>
+                                <dt>Chocolato</dt>
+                                <dd>Chocolate espresso with milk 4.50</dd>
+                                <dt>Corretto</dt>
+                                <dd>Whiskey and coffee 5.00</dd>
+                                <dt>Iced tea</dt>
+                                <dd>Hot tea, except not hot 3.00</dd>
+                                <dt>Soda</dt>
+                                <dd>Coke, Sprite, Fanta, etc. 2.50</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+                <figure class="image-fullwidth">
+                    <img src="/images/coffeehouse2.jpg" alt="coffee cup, a book and food">
+                </figure>
+            </section>
+            <section class="content-where" id="content-where">
+                <h1 class="conteudo-subtitle uppercase whitetext blackbg">Where to find us</h1>
+                <p>Find us at some address at some place.</p>
+                <figure class="image-fullwidth">
+                    <img src="/images/map.jpg" alt="aerial view of the Cafe">
+                </figure>
+                <p><span class="fyi uppercase whitetext blackbg">FYI!</span> We offer full-service catering
+                for any event, large or small. We understand your needs and we will cater the food to satisfy
+                the biggest criteria of them all, both look and taste.</p>
+                <p class="text-centralized"><span class="bold">Reserve</span> a table, ask for today's special or just send us a message:
+                </p>
+                <div class="form-contact">
+                    <form>
+                        <input type="text" name="name" placeholder="Name" class="form-field" required>
+                        <input type="number" name="people-number" placeholder="How many people" class="form-field" required>
+                        <input type="datetime-local" name="date" class="form-field" value="2019-12-25T20:00" required>
+                        <input type="text" name="message-requirements" placeholder="Message \ Special requirements" class="form-field">
+                        <button type="submit" method="POST" class="form-button blackbg whitetext uppercase">Send message</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </section>
+        
+    <footer>
+        <p>
+            Criado por Willian Pramio e Pedro Roussos<br> especialmente para o PS 2019/2 da IDE.
+        </p>
+    </footer>
+  </body>
+  <script>
+      function openMenu(evt, menutype) {
+          var tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (var i=0; i < tabcontent.length; i++){
+              tabcontent[i].className = "tabcontent disabled";
+          }
+          tablinks = document.getElementsByClassName("tablinks");
+          for (var i=0; i < tablinks.length; i++){
+              tablinks[i].className = tablinks[i].className.replace(" active", "");
+          }
+          document.getElementById(menutype).className = document.getElementById(menutype).className.replace(" disabled", "");
+          evt.currentTarget.className += " active";
+      }
+  </script>
+</html>
